@@ -1,0 +1,6 @@
+#messages {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.in { color: red; }
+.out { color: blue; }

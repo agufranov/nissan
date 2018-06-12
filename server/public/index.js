@@ -20,8 +20,9 @@ $(() => {
     })
 
     socket.on('message', (msg) => {
-        console.log('message', msg)
-        const str = msg.map(toHex).join(' ').toUpperCase()
+        const data = new Uint8Array(msg)
+        console.log(data)
+        const str = data.map(toHex).join(' ').toUpperCase()
         $('#messages').append($('<div>').addClass('in').text('< ' + str))
     })
 })
